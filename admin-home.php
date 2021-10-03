@@ -23,7 +23,7 @@
         <div class="grid-item"><a href="shortage-items.php">Shortage Iteams</a></div>
         <div class="grid-item"><a href="#">7</a></div>
         <div class="grid-item"><a href="#">8</a></div>
-        <div class="grid-item"><a href="not_available.php">NA Iteams</a></div>
+        <div class="grid-item"><a href="not-available.php">NA Iteams</a></div>
     </div>
     <?php include 'admin-footer.html' ?>
 </body>
