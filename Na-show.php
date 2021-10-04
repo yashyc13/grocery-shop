@@ -44,13 +44,13 @@
                         <th scope="col">Date</th>
                     </tr>
                 </thead>
+                <!-- Php Code Here -->
                 <?php
 
                 include 'db.php';
                 $sq = "select * from not_available_items";
                 $query = mysqli_query($conn, $sq);
                 while ($res = mysqli_fetch_array($query)) {
-
 
                 ?>
 
