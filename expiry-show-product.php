@@ -34,7 +34,7 @@
     <?php include 'admin-head.html' ?>
     <div class="container" id="con">
         <div class="col-lg-12">
-            <h1 class="text-white text-center">Show Product</h1>
+            <h1 class="text-white text-center">List of Product that expir soon</h1>
 
             <table class="table table-bordered text-white sticky">
                 <thead>
@@ -50,7 +50,11 @@
                 <?php
 
                 include 'db.php';
-                $sq = "select * from product_details";
+                if(isset($_POST['submit'])){
+                $selecte_date_one=date('y/m/d');
+                $selecte_date_two=$_POST['expiry_date_two'];
+                
+                $sq = "select * from product_details where expiry_date between '$selecte_date_one' and '$selecte_date_two' " ;
                 $query = mysqli_query($conn, $sq);
                 while ($res = mysqli_fetch_array($query)) {
                 ?>
@@ -65,6 +69,7 @@
                 </tr>
                 <?php
                 }
+            }
                 ?>
 
             </table>
@@ -80,3 +85,5 @@
 </body>
 
 </html>
+
+
