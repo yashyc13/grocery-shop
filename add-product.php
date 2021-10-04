@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="css/admin-home.css">
     <link rel="stylesheet" href="css/add-product.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <title>Add Product</title>
 </head>
 
@@ -92,7 +93,7 @@ alert("product alredy exist")
 
         $sql = "INSERT INTO product_details (product_name, company_name, expiry_date, product_quantity, product_price) VALUES('$product_name','$company_name', '$expiry_date', '$product_quantity' ,'  $product_price' )";
         if (mysqli_query($conn, $sql)) {
-            echo "<script> alert('New record created successfully') </script>";
+            echo "<script type='text/javascript'>Swal.fire({icon: 'success',text: 'Product added successfully',}).then(function() {window.location.href = 'add-product.php';})</script>";
         } else {
             echo "Error: " . $sql . "<br>" . mysqli_error($conn);
         }

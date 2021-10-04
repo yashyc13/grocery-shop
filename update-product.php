@@ -9,15 +9,22 @@
     <link rel="stylesheet" href="css/update-product.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css">
     <title>Update Product Details</title>
+    <style>
+        .container{
+            position: relative;
+            overflow: scroll;
+        }
+    </style>
 </head>
 
 <body>
     <?php include 'admin-head.html' ?>
     <div class="product_details">
-        <h1>Update Product Details</h1>
+        <h1 class="text-center text-white">Update Product Details</h1>
 
-        <form action="" method="POST">
-            <table class="table table-striped table-dark">
+     <div class="container">
+         
+     <table class="table table-striped table-dark">
                 <thead>
 
 
@@ -60,24 +67,10 @@
                 </tbody>
 
             </table>
+     </div>
 
     </div>
 </body>
 
 </html>
 
-<?php
-
-
-// if (isset($_POST["Delete_Data"])) {
-//     $product_name = $_POST['product_name'];
-//     $sql2 = "DELETE FROM product_details where product_name='$product_name' ";
-
-//     if (mysqli_query($conn, $sql2)) {
-//         echo "<script> alert('Record Deleted successfully') </script>";
-//     } else {
-//         echo "Error: " . $sql2 . "<br>" . mysqli_error($conn);
-//     }
-// }
-
-?>
