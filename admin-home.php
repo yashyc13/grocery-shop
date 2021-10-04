@@ -26,6 +26,8 @@
         <div class="grid-item"><a href="not-available.php">NA Iteams</a></div>
     </div>
     <?php include 'admin-footer.html' ?>
+
+    <h2>this is h2 tag</h2>
 </body>
 
 </html>
