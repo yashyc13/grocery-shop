@@ -19,12 +19,14 @@
         </div>
         <div class="grid-item"><i class="fa-solid fa-cubes"></i><a href="update-product.php" target="_self"> Update
                 Stock</a></div>
-        <div class="grid-item"><i class="fa-solid fa-cart-circle-check"></i><a href="#">Total Iteams</a></div>
+        <div class="grid-item"><i class="fa-solid fa-arrow-up-a-z"></i><a href="total-items.php"> Total Iteams</a>
+        </div>
         <div class="grid-item"><i class="fa-solid fa-store"></i><a href="#"> Shop Profile</a></div>
-        <div class="grid-item"><a href="shortage-items.php">Shortage Iteams</a></div>
-        <div class="grid-item"><a href="#">7</a></div>
-        <div class="grid-item"><a href="#">8</a></div>
-        <div class="grid-item"><a href="not-available.php">NA Iteams</a></div>
+        <div class="grid-item"><i class="fa-solid fa-arrow-trend-down"></i><a href="shortage-items.php"> Shortage
+                Iteams</a></div>
+        <div class="grid-item"><a href="#">Comming Soon...</a></div>
+        <div class="grid-item"><a href="#">Comming Soon...</a></div>
+        <div class="grid-item"><i class="fa-solid fa-exclamation"></i><a href="not-available.php"> NA Iteams</a></div>
     </div>
     <?php include 'admin-footer.html' ?>
 </body>
