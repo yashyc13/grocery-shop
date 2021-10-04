@@ -27,7 +27,6 @@
     </div>
     <?php include 'admin-footer.html' ?>
 
-    <h2>this is h2 tag</h2>
 </body>
 
 </html>
