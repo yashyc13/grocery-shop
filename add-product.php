@@ -86,7 +86,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if ($product_name == $row['product_name']) {
 ?>
 <script type="text/javascript">
-alert("product alredy exist")
+alert("product alredy exist");
 </script>
 <?php
     } else {

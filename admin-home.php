@@ -25,7 +25,7 @@
         <div class="grid-item"><i class="fa-solid fa-arrow-trend-down"></i><a href="shortage-items.php"> Shortage
                 Iteams</a></div>
         <div class="grid-item"><a href="near-expiry.php" target="_self">Near Expiry</a></div>
-        <div class="grid-item"><a href="#">Comming Soon...</a></div>
+        <div class="grid-item"><a href="sold-and-update.php" target="_self">Bill Desk</a></div>
         <div class="grid-item"><i class="fa-solid fa-exclamation"></i><a href="not-available.php"> NA Iteams</a></div>
     </div>
     <?php include 'admin-footer.html' ?>
