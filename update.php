@@ -27,12 +27,12 @@
 
                         $id = $_GET['id'];
                         $product_name = $_POST['product_name'];
-                        $company_name = $_POST['company_name'];
+                        $product_category = $_POST['product_category'];
                         $expiry_date = $_POST['expiry_date'];
                         $product_quantity = $_POST['product_quantity'];
                         $product_price = $_POST['product_price'];
 
-                        $sql = "UPDATE product_details SET product_name='$product_name',company_name='$company_name', expiry_date='$expiry_date', product_quantity='$product_quantity' ,product_price='$product_price' WHERE id='$id' ";
+                        $sql = "UPDATE product_details SET product_name='$product_name',product_category='$product_category', expiry_date='$expiry_date', product_quantity='$product_quantity' ,product_price='$product_price' WHERE id='$id' ";
                         if (mysqli_query($conn, $sql)) {
                             echo " <script type='text/javascript'>Swal.fire({icon: 'success',text: 'Data Updated successfully',}).then(function() {window.location.href = 'update-product.php';})</script>";
                         }
@@ -73,8 +73,8 @@
                </td>
            </tr>
            <td>
-               <label>Company Name</label><br>
-               <input type='text' value=" . $row['company_name'] . " name='company_name'  '>
+               <label>Product Category</label><br>
+               <input type='text' value=" . $row['product_category'] . " name='product_category'  '>
            </td>
            </tr>
            <tr>

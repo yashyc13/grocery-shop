@@ -40,7 +40,7 @@
                 <thead>
                     <tr>
                         <th>Product Name</th>
-                        <th>Company Name</th>
+                        <th>Product Category</th>
                         <th>Expiry Date</th>
                         <th>Product Qty</th>
                         <th>Product Price</th>
@@ -57,7 +57,7 @@
 
                 <tr>
                     <td><?php echo $res['product_name'] ?></td>
-                    <td><?php echo $res['company_name'] ?></td>
+                    <td><?php echo $res['product_category'] ?></td>
                     <td><?php echo $res['expiry_date'] ?></td>
                     <td><?php echo $res['product_quantity'] ?></td>
                     <td><?php echo $res['product_price'] ?></td>
@@ -70,7 +70,7 @@
             </table>
 
             <?php
-            
+
             ?>
         </div>
     </div>

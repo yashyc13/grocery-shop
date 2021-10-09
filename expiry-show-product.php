@@ -40,7 +40,7 @@
                 <thead>
                     <tr>
                         <th>Product Name</th>
-                        <th>Company Name</th>
+                        <th>Product Category</th>
                         <th>Expiry Date</th>
                         <th>Product Qty</th>
                         <th>Product Price</th>
@@ -50,32 +50,32 @@
                 <?php
 
                 include 'db.php';
-                if(isset($_POST['submit'])){
-                $selecte_date_one=date('y/m/d');
-                $selecte_date_two=$_POST['expiry_date_two'];
-                
-                $sq = "select * from product_details where expiry_date between '$selecte_date_one' and '$selecte_date_two' " ;
-                $query = mysqli_query($conn, $sq);
-                while ($res = mysqli_fetch_array($query)) {
+                if (isset($_POST['submit'])) {
+                    $selecte_date_one = date('y/m/d');
+                    $selecte_date_two = $_POST['expiry_date_two'];
+
+                    $sq = "select * from product_details where expiry_date between '$selecte_date_one' and '$selecte_date_two' ";
+                    $query = mysqli_query($conn, $sq);
+                    while ($res = mysqli_fetch_array($query)) {
                 ?>
 
                 <tr>
                     <td><?php echo $res['product_name'] ?></td>
-                    <td><?php echo $res['company_name'] ?></td>
+                    <td><?php echo $res['product_category'] ?></td>
                     <td><?php echo $res['expiry_date'] ?></td>
                     <td><?php echo $res['product_quantity'] ?></td>
                     <td><?php echo $res['product_price'] ?></td>
 
                 </tr>
                 <?php
+                    }
                 }
-            }
                 ?>
 
             </table>
 
             <?php
-            
+
             ?>
         </div>
     </div>
@@ -85,5 +85,3 @@
 </body>
 
 </html>
-
-

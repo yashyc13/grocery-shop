@@ -28,8 +28,20 @@
                         </td>
                     </tr>
                     <td>
-                        <label>Company Name</label><br>
-                        <input type="text" name="company_name" required>
+                        <label>Product Category</label><br>
+                        <select name="product_category"
+                            style="display: block;width: 50%;  margin: 5px 5px;  padding: 5px;  border-width: 0 2 2 2;border-color: skyblue;">
+                            <?php
+                            $sq = "select * from product_cate";
+                            $query = mysqli_query($conn, $sq);
+                            while ($res = mysqli_fetch_array($query)) {
+                            ?>
+                            <option><?php echo $res['product_category'] ?></option>
+                            <?php
+                            }
+
+                            ?>
+                        </select>
                     </td>
                     </tr>
                     <tr>
@@ -74,7 +86,7 @@ include('db.php');
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $product_name = $_POST['product_name'];
-    $company_name = $_POST['company_name'];
+    $product_category = $_POST['product_category'];
     $expiry_date = $_POST['expiry_date'];
     $product_quantity = $_POST['product_quantity'];
     $product_price = $_POST['product_price'];
@@ -83,15 +95,20 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $res = mysqli_query($conn, $checkproduct);
 
     $row = mysqli_fetch_assoc($res);
-    if ($product_name == $row['product_name']) {
+    if (!strcasecmp($product_name, $row['product_name'])) {
 ?>
 <script type="text/javascript">
-alert("product alredy exist");
+Swal.fire({
+    icon: 'error',
+    text: 'Product already exist',
+}).then(function() {
+    window.location.href = 'add-product.php';
+})
 </script>
 <?php
     } else {
 
-        $sql = "INSERT INTO product_details (product_name, company_name, expiry_date, product_quantity, product_price) VALUES('$product_name','$company_name', '$expiry_date', '$product_quantity' ,'  $product_price' )";
+        $sql = "INSERT INTO product_details (product_name, product_category, expiry_date, product_quantity, product_price) VALUES('$product_name','$product_category', '$expiry_date', '$product_quantity' ,'  $product_price' )";
         if (mysqli_query($conn, $sql)) {
             echo "<script type='text/javascript'>Swal.fire({icon: 'success',text: 'Product added successfully',}).then(function() {window.location.href = 'add-product.php';})</script>";
         } else {

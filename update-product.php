@@ -10,10 +10,10 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css">
     <title>Update Product Details</title>
     <style>
-        .container{
-            position: relative;
-            overflow: scroll;
-        }
+    .container {
+        position: relative;
+        overflow: scroll;
+    }
     </style>
 </head>
 
@@ -22,16 +22,16 @@
     <div class="product_details">
         <h1 class="text-center text-white">Update Product Details</h1>
 
-     <div class="container">
-         
-     <table class="table table-striped table-dark">
+        <div class="container">
+
+            <table class="table table-striped table-dark">
                 <thead>
 
 
 
                     <tr>
                         <th scope="col">Product Name</th>
-                        <th scope="col">Product Company</th>
+                        <th scope="col">Product Category</th>
                         <th scope="col">Expiry Date</th>
                         <th scope="col">Quantity</th>
                         <th scope="col">MRP</th>
@@ -50,7 +50,7 @@
                     ?>
                     <tr>
                         <td><?php echo $row['product_name']  ?></td>
-                        <td><?php echo $row['company_name'] ?></td>
+                        <td><?php echo $row['product_category'] ?></td>
                         <td><?php echo $row['expiry_date'] ?></td>
                         <td><?php echo $row['product_quantity'] ?></td>
                         <td><?php echo $row['product_price'] ?></td>
@@ -67,10 +67,9 @@
                 </tbody>
 
             </table>
-     </div>
+        </div>
 
     </div>
 </body>
 
 </html>
-

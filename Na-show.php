@@ -61,7 +61,6 @@
                     <td><?php echo $res['product_quantity'] ?></td>
                     <td><?php echo $res['product_price'] ?></td>
                     <td><?php echo $res['request_date'] ?></td>
-
                 </tr>
                 <?php
                 }
