@@ -1,0 +1,40 @@
+body{
+    margin: 0;
+    padding: 0;
+    background: #16191b;
+}
+.center h1{
+    text-align: center;
+    padding: 0 15px 20px 0;
+    border-bottom: 1px solid silver;
+}
+.center{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 500px;
+    background: white;
+    border-radius: 10px;
+}
+.center form{
+    padding: 0 40px;
+    box-sizing: border-box;
+}
+input{
+    height: 30px;
+    margin: 7px;
+    border-radius: 10px;
+    outline: none;
+
+}
+#idd{
+    margin: 5px;
+    color: green;
+}
+
+a{
+    text-align: center;
+    text-decoration: none;
+    margin: 180px;
+}
