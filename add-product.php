@@ -16,10 +16,11 @@
 <body>
     <?php include 'admin-head.html' ?>
 
-    <form name="add-product" method="POST" action="<?php $_SERVER["PHP_SELF"] ?>" enctype="multipart/form-data">
-        <div class="add_prod" style="height: 500px; width:80%;padding: 10px;">
-            <div style="margin-left: 100px;margin-top: 10px;">
-                <h1 style="text-align: center;">Add Product Details</h1>
+
+    <div class="add_prod" style="height: 500px; width:80%;padding: 10px;">
+        <div style="margin-left: 100px;margin-top: 10px;">
+            <h1 style="text-align: center;">Add Product Details</h1>
+            <form name="add-product" method="POST" action="<?php $_SERVER["PHP_SELF"] ?>" enctype="multipart/form-data">
                 <table cellspacing="10px">
                     <tr>
                         <td>
@@ -71,10 +72,13 @@
                         </td>
                     </tr>
                 </table>
-            </div>
-            <br>
+            </form>
+            <button
+                style="background: #0275d8;color: white;border-radius: 5px;display: block;width: 38.5%;padding: 5px; margin-left:10px;"><a
+                    href="add-category.php" role="button">Add Category</a></button>
         </div>
-    </form>
+        <br>
+    </div>
 
     <?php include 'admin-footer.html' ?>
 </body>
